@@ -8,7 +8,16 @@ class FlatPage extends Controller
 {
     public function index()
 {
-return view("welcome ");
+
+$user = [
+    'alan',
+    'roberto',
+    'jose',
+    'manuel',
+];
+    return view('index')
+        ->with('users', $user)
+        ->with('title','punto ventas');
 }
 
 public function nosotros()
